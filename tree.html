@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="tree.css">
+</head>
+
+<body>
+    <p role="toolbar" aria-label="Node tools" aria-hidden="true" class="toolbar">
+        <button type="button" data-js="addChild">+ Add new</button>
+        <button type="button" data-js="deleteNode">
+    &times; Delete
+    <ins role="alert" aria-hidden="true" class="confirm" aria-label="Please confirm deletion">Are you sure? (press again to continue)</ins>
+    <ins role="alert" aria-hidden="true" class="root" aria-label="You can't delete root">You can't delete the root node</ins>
+</button>
+        <button type="button" data-js="editName">✎ Edit </button>
+    </p>
+    <div class="tree well">
+        <h1>Categories your tree:</h1>
+        <ul class="tree">
+            <li>
+                <button type="button" aria-pressed="false" data-js="node" onclick="Collapser(this)">
+                <i class="fa fa-info-circle fa-1x" aria-hidden="true"></i> Home</button>
+            </li>
+        </ul>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="tree.js"></script>
+</html>
